@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Реєстрація — Ly-Jess</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header id="site-header"></header>
+    <main class="container">
+      <h1>Реєстрація</h1>
+      <p id="message" class="message" hidden></p>
+      <form id="register-form" class="form">
+        <label>
+          Username *
+          <input
+            name="username"
+            autocomplete="username"
+            required
+            maxlength="150"
+          />
+        </label>
+        <label>
+          Ім'я
+          <input name="first_name" autocomplete="given-name" maxlength="150" />
+        </label>
+        <label>
+          Прізвище
+          <input name="last_name" autocomplete="family-name" maxlength="150" />
+        </label>
+        <label>
+          Email *
+          <input
+            type="email"
+            name="email"
+            autocomplete="email"
+            required
+            maxlength="254"
+          />
+        </label>
+        <label>
+          Пароль * (мінімум 8 символів)
+          <input
+            type="password"
+            name="password"
+            autocomplete="new-password"
+            required
+            minlength="8"
+            maxlength="128"
+          />
+        </label>
+        <label>
+          Повторіть пароль *
+          <input
+            type="password"
+            name="password_confirm"
+            autocomplete="new-password"
+            required
+            maxlength="128"
+          />
+        </label>
+        <button type="submit" class="button">Зареєструватися</button>
+      </form>
+      <p>Вже є акаунт? <a id="login-link" href="login.html">Увійти</a></p>
+    </main>
+    <script type="module" src="js/register.js"></script>
+  </body>
+</html>

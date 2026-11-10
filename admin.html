@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Адмінка — Ly-Jess</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header id="site-header"></header>
+    <main class="container">
+      <h1>Керування каталогом</h1>
+      <p class="hint">Цю сторінку бачать лише адміністратори.</p>
+      <p id="message" class="message" hidden></p>
+      <section id="admin-content" hidden>
+        <h2>Додати товар</h2>
+        <form id="product-form" class="form">
+          <label>
+            Назва
+            <input name="name" required maxlength="200" />
+          </label>
+          <label>
+            Ціна, грн
+            <input name="price" type="number" step="0.01" min="0.01" required />
+          </label>
+          <label>
+            Тип тварини
+            <select name="animal_type" required>
+              <option value="cat">Кіт</option>
+              <option value="dog">Собака</option>
+              <option value="rodent">Гризун</option>
+              <option value="bird">Птах</option>
+              <option value="fish">Рибки</option>
+            </select>
+          </label>
+          <label>
+            Категорія
+            <select name="category_id" id="category" required></select>
+          </label>
+          <label>
+            Бренд
+            <select name="brand_id" id="brand" required></select>
+          </label>
+          <label>
+            Кількість на складі
+            <input name="stock" type="number" min="0" value="0" required />
+          </label>
+          <button type="submit" class="button">Додати</button>
+        </form>
+        <h2>Товари</h2>
+        <ul id="products" class="cards"></ul>
+      </section>
+    </main>
+    <script type="module" src="js/admin.js"></script>
+  </body>
+</html>
