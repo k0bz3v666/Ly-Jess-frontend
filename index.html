@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Каталог — Ly-Jess</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header id="site-header"></header>
+    <main class="container">
+      <h1>Каталог товарів</h1>
+      <p class="hint">Цю сторінку бачать усі, навіть без входу.</p>
+      <form id="search-form" class="row">
+        <input
+          type="search"
+          id="search"
+          placeholder="Пошук за назвою або брендом"
+        />
+        <button type="submit" class="button">Шукати</button>
+      </form>
+      <p id="message" class="message" hidden></p>
+      <ul id="products" class="cards"></ul>
+    </main>
+    <script type="module" src="js/catalog.js"></script>
+  </body>
+</html>
